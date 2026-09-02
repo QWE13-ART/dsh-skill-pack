@@ -3,7 +3,7 @@
 [![Version](https://img.shields.io/npm/v/dsh-skill-pack?color=blue)](https://www.npmjs.com/package/dsh-skill-pack)
 [![License: MIT](https://img.shields.io/badge/License-MIT-red.svg)](https://opensource.org/licenses/MIT)
 
-**94 original, field-tested skills for DeepSeek Harness agents — one command installs them all into your agent's skill folder.**
+**93 original, field-tested skills for DeepSeek Harness agents — one command installs them all into your agent's skill folder.**
 
 Built from months of real agent operations: these skills encode the disciplines that actually caught our agent's mistakes — thinking frameworks that fire on the right triggers, verification workflows that refuse fake completion, memory discipline that survives context compaction.
 
@@ -23,7 +23,7 @@ Restart DSH after install (skills are scanned at startup).
 |---|---|---|
 | Thinking frameworks | 28 | `thinking-bounded-rationality`, `thinking-red-team`, `thinking-cynefin` — trigger-conditioned reasoning skills |
 | Security assessment (`dsh-sec-*`) | 42 | `dsh-sec-code-audit`, `dsh-sec-reverse-engineering`, `dsh-sec-llm-security`, ... — **authorized testing only**; every skill carries a "for authorized..." scope line |
-| Verification & agent hygiene | ~23 | `dsh-verification`, `dsh-tdd`, `dsh-debugging`, `dsh-memory`, `dsh-self-evolution`, `dsh-grilling`, ... |
+| Verification & agent hygiene | 22 | `dsh-verification`, `dsh-tdd`, `dsh-debugging`, `dsh-memory`, `dsh-self-evolution`, `dsh-grilling`, ... |
 
 Full inventory: `skills/` — every directory is one skill (`SKILL.md` + assets).
 
@@ -44,8 +44,14 @@ Provenance scan: `node scripts/scan-provenance.mjs` flags third-party markers (k
 
 ## Changelog
 
+### v1.0.1 (2026-09-02)
+
+- Fix: package description and README counts corrected 94 → 93 (dsh-theme-factory, a third-party-origin skill, was excluded after the initial count)
+- Description now names the security-assessment block explicitly
+
 ### v1.0.0 (2026-09-02)
 
-- First release: 94 skills (65 `dsh-*` + 28 `thinking-*` + `autotelic-evolution`)
+- First release: 93 skills (28 `thinking-*` + 42 `dsh-sec-*` + 22 agent-hygiene `dsh-*` + `autotelic-evolution`)
 - Installer: additive-only copy (never deletes target skills), `--force` for overwrite
-- Provenance vetted: 30 third-party-origin skills excluded by marker scan (28) + manual review (2)
+- Provenance vetted: 30 third-party-origin skills + 1 nested third-party project (`src-hunter`) excluded
+- Gitleaks clean: 1 doc-example finding (curl auth header) fixed at source before release
