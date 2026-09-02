@@ -40,7 +40,7 @@ npm run build    # re-copy from ~/.dsh/skills (exclusion list in scripts/build-r
 node scripts/check-frontmatter.mjs
 ```
 
-Provenance scan: `node scripts/scan-provenance.mjs` flags third-party markers (kept in the dsh-claim-gate repo test suite).
+Provenance scan: `node scripts/scan-provenance.mjs` flags third-party markers in the source `~/.dsh/skills` tree (both scripts live in this repo under `scripts/`).
 
 ## Changelog
 
