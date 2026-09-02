@@ -1,6 +1,6 @@
 {
   "name": "dsh-skill-pack",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "93 original DSH skills in one installable pack: thinking frameworks, authorized-security-assessment skills (sec-*), verification and agent-hygiene disciplines — install into ~/.dsh/skills with one command.",
   "type": "module",
   "license": "MIT",
